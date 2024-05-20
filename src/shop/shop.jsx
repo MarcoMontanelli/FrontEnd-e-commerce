@@ -28,6 +28,76 @@ const products = [
     remaining: 80,
     category: "Electronics"
   },
+  {
+    id: 3,
+    name: "Product 2",
+    description: "This is another cool product.",
+    price: "39.99",
+    image: "https://via.placeholder.com/150",
+    date: "2024-05-01",
+    sold: 120,
+    remaining: 80,
+
+    category: "Electronics"
+  },
+  {
+    id: 4,
+    name: "Product 2",
+    description: "This is another cool product.",
+    price: "39.99",
+    image: "https://via.placeholder.com/150",
+    date: "2024-05-01",
+    sold: 120,
+    remaining: 80,
+    category: "Electronics"
+  },
+  {
+    id: 5,
+    name: "Product 2",
+    description: "This is another cool product.",
+    price: "39.99",
+    image: "https://via.placeholder.com/150",
+    date: "2024-05-01",
+    sold: 120,
+    remaining: 80,
+    category: "Electronics"
+  },
+  {
+    id: 6,
+    name: "Product 2",
+    description: "This is another cool product.",
+    price: "39.99",
+    image: "https://via.placeholder.com/150",
+    date: "2024-05-01",
+    sold: 120,
+    remaining: 80,
+    category: "Electronics"
+  },
+  {
+    id: 7,
+    name: "Product 2",
+    description: "This is another cool product.",
+    price: "39.99",
+    image: "https://via.placeholder.com/150",
+    date: "2024-05-01",
+    sold: 120,
+    remaining: 80,
+    category: "Electronics"
+  },
+  {
+    id: 8,
+    name: "Product 2",
+    description: "This is another cool product.",
+    price: "39.99",
+    image: "https://via.placeholder.com/150",
+    date: "2024-05-01",
+    sold: 120,
+    remaining: 80,
+    category: "Electronics"
+  },
+
+
+
   // Add more products as needed
 ];
 

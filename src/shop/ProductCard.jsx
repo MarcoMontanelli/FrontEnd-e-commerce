@@ -1,12 +1,19 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartPlus, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import { motion } from 'framer-motion';
 
 const ProductCard = ({ product }) => {
-    if (!product) {
-        console.error("ProductCard called without product");
-        return null;  // This will prevent any further rendering if product is undefined.
-      }
+  if (!product) {
+    console.error("ProductCard called without product");
+    return null;  // This will prevent any further rendering if product is undefined.
+  }
+
   return (
-    <div className="bg-gray-800 text-white rounded-lg shadow-lg overflow-hidden">
+    <motion.div
+      className="bg-gray-800 text-white rounded-lg shadow-lg overflow-hidden max-w-sm"
+      whileHover={{ scale: 1.05 }}
+    >
       <div className="relative">
         {/* Image Carousel Placeholder */}
         <img src={product.image} alt={product.name} className="w-full h-48 object-cover" />
@@ -16,7 +23,7 @@ const ProductCard = ({ product }) => {
       </div>
       <div className="p-4">
         <h3 className="text-xl font-semibold">{product.name}</h3>
-        <p className="text-sm">{product.description}</p>
+        <p className="text-sm text-gray-400">{product.description}</p>
         <div className="flex justify-between items-center mt-2 mb-2">
           <span className="text-lg font-bold">${product.price}</span>
         </div>
@@ -24,10 +31,10 @@ const ProductCard = ({ product }) => {
           <span className="text-gray-400 text-xs">Sold: {product.sold} | Remaining: {product.remaining}</span>
           <div className="flex items-center">
             <button className="text-purple-500 hover:text-purple-700">
-              <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">{/* Heart icon */}</svg>
+              <FontAwesomeIcon icon={faCartPlus} className="w-6 h-6 fill-current" />
             </button>
             <button className="text-purple-500 hover:text-purple-700 ml-2">
-              <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">{/* Share icon */}</svg>
+              <FontAwesomeIcon icon={faInfoCircle} className="w-6 h-6 fill-current" />
             </button>
           </div>
         </div>
@@ -36,7 +43,7 @@ const ProductCard = ({ product }) => {
           <button className="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded text-white transition duration-150">Details</button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
